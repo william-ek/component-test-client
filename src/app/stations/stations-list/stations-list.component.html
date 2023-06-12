@@ -1,0 +1,34 @@
+<div class="col-md-12">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Host Name</th>
+                <th>Name</th>
+                <th>Version</th>
+                <th>Index</th>
+                <th>platform</th>
+                <th>gateway</th>
+                <th>Active</th>
+                <th>Valid</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let station of stations" >
+            <td>{{ station.id }}</td>
+            <td>{{ station.hostName }}</td>
+            <td>{{ station.name }}</td>
+            <td>{{ station.version }}</td>
+            <td>{{ station.index }}</td>
+            <td>{{ station.platform }}</td>
+            <td>{{ station.gateway }}</td>
+            <td>{{ station.active }}</td>
+            <td>{{ station.valid }}</td>
+            <td class="glyphicon glyphicon-pencil" role="button"></td>
+            <td class="glyphicon glyphicon-trash" role="button"></td>
+          </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,63 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+  
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-left">
+            <li class="dropdown" appDropdown>
+              <a style="cursor: pointer;" class="dropdown-toggle glyphicon glyphicon-menu-hamburger" role="button"></a>
+              <ul class="dropdown-menu">
+                  <li><a style="cursor: pointer;" (click)="onFeatureSelected('home')">Home</a></li>
+                  <li><a style="cursor: pointer;" (click)="onFeatureSelected('components')">Components</a></li>
+                  <li><a style="cursor: pointer;" (click)="onFeatureSelected('stations')">Stations</a></li>
+                  <li><a style="cursor: pointer;" (click)="onFeatureSelected('tests')">Tests</a></li>
+              </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown" appDropdown>
+              <a style="cursor: pointer;" class="dropdown-toggle glyphicon glyphicon-option-vertical" role="button"></a>
+              <ul class="dropdown-menu">
+                  <li><a style="cursor: pointer;" (click)="onModseSelected('list')">Display</a></li>
+                  <li><a style="cursor: pointer;" (click)="onModseSelected('create')">Create</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+        <ul class="nav navbar-default">
+            <li *ngIf="home" class="text-center"><h4>Home</h4></li>
+            <li *ngIf="component" class="text-center"><h4>Components</h4></li>
+            <li *ngIf="stations" class="text-center"><h4>Stations</h4></li>
+            <li *ngIf="tests" class="text-center"><h4>Tests</h4></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div *ngIf="selectedFeature == 'home'">
+    <img src="/assets/thing.00_square-940x940-c-default.png" alt="Where's my image?" width="500px" height="500px" >
+  </div>
+  <div *ngIf="selectedFeature == 'components'">
+        <div *ngIf="selectedMode == 'list'">
+                <app-testablecomponents-list></app-testablecomponents-list>
+        </div>
+        <div *ngIf="selectedMode == 'create'">
+            <app-testablecomponents-detail></app-testablecomponents-detail>
+        </div>
+  </div>
+  <div *ngIf="selectedFeature == 'stations'">
+        <div *ngIf="selectedMode == 'list'">
+            <app-stations-list></app-stations-list>
+        </div>
+        <div *ngIf="selectedMode == 'create'">
+            <app-stations-detail></app-stations-detail>
+        </div>
+  </div>
+  <div *ngIf="selectedFeature == 'tests'">
+        <div *ngIf="selectedMode == 'list'">
+            <app-testscripts-list></app-testscripts-list>
+        </div>
+        <div *ngIf="selectedMode == 'create'">
+            <app-testscripts-detail></app-testscripts-detail>
+        </div>
+  </div>

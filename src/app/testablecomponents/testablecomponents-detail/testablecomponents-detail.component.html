@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div
+            id="component-data"
+            ngModelGroup="componentData"
+            #componentData="ngModelGroup">
+            <div class="form-group">
+              <label for="serialNumber">Serial Number</label>
+              <input
+                type="text"
+                id="serialNumber"
+                class="form-control"
+                ngModel
+                name="serialNumber"
+                required>
+            </div>
+            <div class="form-group">
+                <label for="type">type</label>
+                <input
+                  type="text"
+                  id="type"
+                  class="form-control"
+                  ngModel
+                  name="type"
+                  required>
+            </div>
+            <div class="form-group">
+                <label for="testDate">Test Date</label>
+                <input
+                  type="text"
+                  id="testDate"
+                  class="form-control"
+                  ngModel
+                  name="testDate"
+                  required>
+            </div>
+            <div class="form-group">
+                <label for="testName">Test Name</label>
+                <input
+                  type="text"
+                  id="testName"
+                  class="form-control"
+                  ngModel
+                  name="testName"
+                  required>
+            </div>
+            <div class="form-group">
+                <label for="testVersion">Test Version</label>
+                <input
+                  type="text"
+                  id="testVersion"
+                  class="form-control"
+                  ngModel
+                  name="testVersion"
+                  required>
+            </div>
+            <div class="form-group">
+                <label for="passed">Passed</label>
+                <input
+                  type="text"
+                  id="passed"
+                  class="form-control"
+                  ngModel
+                  name="passed"
+                  required>
+            </div>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!f.valid">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr>
+  </div>

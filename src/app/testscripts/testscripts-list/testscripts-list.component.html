@@ -1,0 +1,30 @@
+<div class="col-md-12">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Version</th>
+                <th>Type</th>
+                <th>Required Results</th>
+                <th>Active</th>
+                <th>Valid</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let test of tests" >
+            <td>{{ test.id }}</td>
+            <td>{{ test.name }}</td>
+            <td>{{ test.version }}</td>
+            <td>{{ test.type }}</td>
+            <td>{{ test.required }}</td>
+            <td>{{ test.active }}</td>
+            <td>{{ test.valid }}</td>
+            <td class="glyphicon glyphicon-pencil" role="button"></td>
+            <td class="glyphicon glyphicon-trash" role="button"></td>
+          </tr>
+        </tbody>
+    </table>
+</div>

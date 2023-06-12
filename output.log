@@ -1,0 +1,7 @@
+Starting up http-server, serving /dist
+Available on:
+  http://192.168.0.20:80
+  http://192.168.232.1:80
+  http://192.168.139.1:80
+  http://127.0.0.1:80
+Hit CTRL-C to stop the server

@@ -1,0 +1,34 @@
+<div class="col-md-12">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Serial Number</th>
+                <th>Type</th>
+                <th>Test Date</th>
+                <th>Test Name</th>
+                <th>Test Version</th>
+                <th>Passed</th>
+                <th>Active</th>
+                <th>Valid</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let component of components" >
+            <td>{{ component.id }}</td>
+            <td>{{ component.serialNumber }}</td>
+            <td>{{ component.type }}</td>
+            <td>{{ component.testDate }}</td>
+            <td>{{ component.testName }}</td>
+            <td>{{ component.testVersion }}</td>
+            <td>{{ component.passed }}</td>
+            <td>{{ component.active }}</td>
+            <td>{{ component.valid }}</td>
+            <td *ngIf="component.valid" class="btn  btn-success" role="button">invalidate</td>
+            <td *ngIf="component.active" class="btn  btn-success" role="button">deactivate</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
